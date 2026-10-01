@@ -1,0 +1,10 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lustre Lapidist Admin</title>
+<style>body{font:15px/1.5 system-ui;margin:0;padding:24px;background:#f8f5fb;color:#1b1633}input,select,button{font:inherit;padding:8px}table{border-collapse:collapse;width:100%;margin-top:16px;background:#fff}td,th{border:1px solid #d9d2e3;padding:8px;text-align:left;vertical-align:top}button{background:#b3123f;color:#fff;border:0;cursor:pointer}</style></head><body>
+<h1>Order admin</h1><input id="key" type="password" placeholder="Admin key"> <button onclick="load()">Load orders</button> <span id="msg"></span>
+<table><thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Ship to</th><th>Status</th></tr></thead><tbody id="out"></tbody></table>
+<script>
+const S=['Confirmed','Packed','Shipped','Out for delivery','Delivered'],e=s=>String(s).replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';'),H=()=>({'x-admin-key':key.value,'Content-Type':'application/json'});
+async function load(){const r=await fetch('/api/admin/orders',{headers:H()});if(!r.ok)return msg.textContent='Wrong admin key.';msg.textContent='';
+out.innerHTML=(await r.json()).map(o=>{const a=JSON.parse(o.addr),i=JSON.parse(o.items);return`<tr><td>${e(o.id)}</td><td>${new Date(o.created).toLocaleString('en-IN')}</td><td>${i.map(x=>e(x.name)+' '+x.c+'ct x'+x.q).join('<br>')}</td><td>Rs ${o.total}</td><td>${e(a.name)}, ${e(a.phone)}<br>${e(a.line)}, ${e(a.city)}, ${e(a.state)} ${e(a.pin)}</td><td><select onchange="setS('${e(o.id)}',this.value)">${S.map(s=>`<option ${s==o.status?'selected':''}>${s}</option>`).join('')}</select></td></tr>`}).join('')}
+async function setS(id,s){const r=await fetch('/api/admin/orders/'+id,{method:'PATCH',headers:H(),body:JSON.stringify({status:s})});msg.textContent=r.ok?'Saved':'Could not save'}
+</script></body></html>
