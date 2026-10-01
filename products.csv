@@ -1,0 +1,23 @@
+id,name,category,color,price_per_carat,description
+1,Diamond,precious,#dfe9f2,45000,The hardest gemstone. Brilliant and fiery. Ruled by Venus.
+2,Ruby,precious,#c1123c,12000,Deep red corundum. Symbol of vitality and the Sun.
+3,Emerald,precious,#0f8a5f,8000,Rich green beryl. Linked to Mercury and clarity of thought.
+4,Blue Sapphire,precious,#1f3fbf,15000,Velvety blue corundum. Linked to Saturn and discipline.
+5,Amethyst,semi,#8e5bc8,800,Violet quartz. Calming and widely worn as a birthstone.
+6,Citrine,semi,#e8a317,600,Golden quartz. Associated with abundance and warmth.
+7,Garnet,semi,#8a1c2b,900,Deep wine red. A durable stone for everyday rings.
+8,Topaz,semi,#4aa3df,1200,Clear blue or golden crystals with strong shine.
+9,Moonstone,semi,#cfd8ee,700,Soft blue glow that drifts as the stone moves.
+10,Turquoise,semi,#2bb3a6,500,Opaque sky blue stone prized for centuries.
+11,Ruby (Manik),navratna,#b3123f,12000,Navratna stone for the Sun.
+12,Pearl (Moti),navratna,#f3eee6,3000,Navratna stone for the Moon.
+13,Red Coral (Moonga),navratna,#e0452f,1500,Navratna stone for Mars.
+14,Emerald (Panna),navratna,#13935f,8000,Navratna stone for Mercury.
+15,Yellow Sapphire (Pukhraj),navratna,#f2c230,10000,Navratna stone for Jupiter.
+16,Diamond (Heera),navratna,#e6eef7,45000,Navratna stone for Venus.
+17,Blue Sapphire (Neelam),navratna,#2243c4,15000,Navratna stone for Saturn.
+18,Hessonite (Gomed),navratna,#c8741f,1800,Navratna stone for Rahu.
+19,Cat's Eye (Lehsunia),navratna,#a8a23a,4000,Navratna stone for Ketu.
+20,Aquamarine,semi,#7fd1e6,2500,Pale sea blue beryl. The traditional March birthstone.
+21,Peridot,semi,#9bc53d,1000,Fresh olive green stone. The traditional August birthstone.
+22,Opal,semi,#e8e1ea,1500,Milky stone with flashes of rainbow colour. The traditional October birthstone.
